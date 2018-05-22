@@ -22,7 +22,8 @@
     </style>
 </head>
 
-<body>
+<body onload="convertCurrency();">
+    <!-- changing the currency when the page loads -->
     <div id="box">
         <h2>Currency Converter</h2>
         <table>
@@ -34,7 +35,7 @@
                     <input type="text" id="fromAmount" size="20" value="1">
                 </td>
                 <td>
-                    <select id="from">
+                    <select id="from" onchange="convertCurrency();" onkeyup="convertCurrency();">
                         <option value="AUD">Australian Dollar</option>
                         <option value="BGN">Bulgarian Lev</option>
                         <option value="CAD">Canadian Dollar</option>
@@ -57,7 +58,7 @@
                     <input type="text" id="ToAmount" size="20" disabled>
                 </td>
                 <td>
-                    <select id="to">
+                    <select id="to" onchange="convertCurrency();">
                         <option value="AUD">Australian Dollar</option>
                         <option value="BGN">Bulgarian Lev</option>
                         <option value="CAD">Canadian Dollar</option>
@@ -75,5 +76,6 @@
         </table>
     </div>
 </body>
+<script src="/script.js"></script>
 
 </html>
